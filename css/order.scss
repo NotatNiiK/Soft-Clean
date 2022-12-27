@@ -1,0 +1,316 @@
+//!--------------------NULLING__STYLES--------------------
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.main-block {
+    background: url(../img/Order/Main/Bg.png) center / cover no-repeat;
+    flex: 1 1 auto;
+    padding: 65px 0px 110px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media all and (max-width:64.375em) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        max-width: 33rem;
+        font-weight: 600;
+        margin: 0px 0px 17px 0px;
+
+        @media all and (max-width:64.375em) {
+            max-width: none;
+        }
+
+        span {
+            font-weight: 800;
+        }
+    }
+
+    &__info {
+        font-size: 1.125rem;
+        line-height: 160%;
+        color: #4B5258;
+        max-width: 32.5rem;
+        margin: 0px 0px 30px 0px;
+
+        @media all and (max-width:64.375em) {
+            max-width: none;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        padding: 0px 0px 83px 0px;
+
+        @media all and (max-width:48em) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__button {
+        max-width: 18.75rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFC24D;
+        border-radius: 100px;
+        padding: 30px 48px;
+        transition: all .4s ease 0s;
+
+        @media all and (max-width:30em) {
+            padding: 20px 25px;
+        }
+
+        @media all and (max-width:48em) {
+            margin: 0px 0px 20px 0px;
+        }
+
+        &:hover {
+            background: #cf9d40;
+        }
+
+        &_green {
+            position: relative;
+            z-index: 5;
+            background: #7AD06D;
+            box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.3);
+            flex-direction: column;
+            margin: 0px 15px 0px 0px;
+
+            &::before {
+                position: absolute;
+                border-radius: 100px;
+                z-index: 4;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: #7AD06D;
+                transition: all .4s ease 0s;
+            }
+
+            &:hover {
+                &::before {
+                    background: #59a54d;
+                }
+            }
+
+            span {
+                position: relative;
+                z-index: 5;
+
+                &:nth-child(2) {
+                    font-size: 0.75rem;
+                    line-height: 160%;
+                    color: #FFFFFF;
+                    text-transform: none;
+                    font-weight: 400;
+                }
+            }
+
+            ul {
+                min-height: 9.5rem;
+                width: 90.5%;
+                position: absolute;
+                z-index: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                left: 16px;
+                top: 20px;
+                padding: 81px 14px 14px;
+                box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;
+                margin: 0px 0px 30px 0px;
+
+                @media all and (max-width:30em) {
+                    min-height: 5rem;
+                }
+
+                li {
+                    position: relative;
+                    padding: 0px 0px 0px 10px;
+                    font-size: 8px;
+                    font-weight: 600;
+                    line-height: 160%;
+                    color: #959A9D;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        top: 6px;
+                        width: 2px;
+                        height: 2px;
+                        background: #959A9D;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        @media all and (max-width:64.375em) {
+            padding: 80px 0px 0px 0px;
+        }
+    }
+
+    &__ellipse {
+        position: relative;
+        width: 22.375rem;
+        height: 22.3125rem;
+        border-radius: 50%;
+        background: #FFC24D;
+
+        @media all and (max-width:30em) {
+            width: 15.375rem;
+            height: 15.3125rem;
+        }
+
+        &::before {
+            position: absolute;
+            content: url(../img/Order/Main/leaves1.png);
+            left: -82px;
+            top: -11px;
+        }
+
+        &::after {
+            position: absolute;
+            content: url(../img/Order/Main/leaves2.png);
+            top: 35px;
+            right: -125px;
+        }
+    }
+
+    &__book-img {
+        position: absolute;
+        width: 18.625rem;
+        height: 27.125rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @media all and (max-width:30em) {
+            width: 13rem;
+            height: 20rem;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__discount-img {
+        position: absolute;
+        z-index: 5;
+        width: 25.3125rem;
+        height: 15.4375rem;
+        top: 151px;
+        left: -80px;
+
+        @media all and (max-width:30em) {
+            width: 25rem;
+            height: 10rem;
+            top: 60px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
